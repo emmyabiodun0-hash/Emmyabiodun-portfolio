@@ -1,0 +1,459 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Emmy Abiodun — Python Flask &amp; Full Stack Developer</title>
+<meta name="description" content="Emmy Abiodun — Python Flask, Full Stack &amp; PostgreSQL developer building secure, scalable, beautiful web applications.">
+<link rel="icon" href="data:,">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="bg-aurora" aria-hidden="true"></div>
+<div class="bg-grid" aria-hidden="true"></div>
+<canvas id="particle-canvas" aria-hidden="true"></canvas>
+<div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+
+<!-- ================= NAV (single page — every link scrolls, nothing points offsite) ================= -->
+<nav class="nav" id="mainNav">
+  <div class="nav-inner">
+    <a href="#home" class="logo" data-link>Emmy dev</a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#home" data-link>Home</a></li>
+      <li><a href="#about" data-link>About</a></li>
+      <li><a href="#skills" data-link>Skills</a></li>
+      <li><a href="#projects" data-link>Projects</a></li>
+      <li><a href="#github" data-link>GitHub</a></li>
+      <li><a href="#contact" data-link>Contact</a></li>
+    </ul>
+    <a class="nav-cta" href="#contact" data-link>Let's talk</a>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+
+<!-- ================= HERO ================= -->
+<header class="hero" id="home">
+  <div class="container hero-grid">
+    <div class="hero-copy">
+      <div class="hero-kicker">// full stack developer · lagos, nigeria</div>
+      <h1 class="reveal in">Emmy Abiodun</h1>
+      <div class="hero-role" data-typing='["Python Flask Developer","Full Stack Developer","PostgreSQL Developer"]'></div>
+      <p class="hero-tag reveal in">Building secure, scalable, and beautiful web applications that solve real-world problems.</p>
+      <div class="hero-actions reveal in">
+        <a href="#projects" class="btn btn-primary" data-link>View Projects</a>
+        <a href="assets/Emmy_Abiodun_CV.pdf" class="btn btn-outline" id="cvBtn" download>Download CV</a>
+        <a href="https://wa.me/2348163246702?text=Hello%20Emmy%2C%20I%20found%20your%20portfolio%20and%20I%20would%20like%20to%20discuss%20a%20project%20with%20you." target="_blank" rel="noopener" class="btn btn-whatsapp">Contact on WhatsApp</a>
+      </div>
+
+      <div class="hero-terminal glass reveal in">
+        <div class="term-bar">
+          <span class="term-dot r"></span><span class="term-dot y"></span><span class="term-dot g"></span>
+          <span class="term-title">app.py</span>
+        </div>
+        <div class="term-body" data-term-lines='["<span class=\"kw\">from</span> flask <span class=\"kw\">import</span> Flask","app = Flask(<span class=\"fn\">__name__</span>)","","<span class=\"cm\"># crafted by Emmy Abiodun</span>","<span class=\"kw\">@app.route</span>(<span class=\"str\">\"/portfolio\"</span>)","<span class=\"kw\">def</span> <span class=\"fn\">welcome</span>():","&nbsp;&nbsp;&nbsp;&nbsp;<span class=\"kw\">return</span> <span class=\"str\">\"Let&#39;s build something real.\"</span>"]'></div>
+      </div>
+    </div>
+
+    <div class="hero-visual">
+      <div class="avatar-glow" aria-hidden="true"></div>
+      <div class="avatar-card" data-tilt>
+        <div class="avatar-inner">
+          <img src="pic.png" alt="Portrait of Emmy Abiodun" onerror="this.parentElement.innerHTML='<div class=&quot;avatar-fallback&quot;>EA</div>'">
+        </div>
+      </div>
+      <div class="orbit-chip chip-1 glass"><span class="ic" style="background:var(--cyan)"></span>Flask</div>
+      <div class="orbit-chip chip-2 glass"><span class="ic" style="background:var(--amber)"></span>PostgreSQL</div>
+      <div class="orbit-chip chip-3 glass"><span class="ic" style="background:var(--violet)"></span>JavaScript</div>
+    </div>
+  </div>
+
+  <a href="#about" class="scroll-cue" data-link><span>SCROLL</span><span class="line"></span></a>
+</header>
+
+<!-- ================= ABOUT (full — no separate page) ================= -->
+<section id="about">
+  <div class="container about-grid">
+    <div class="reveal">
+      <div class="eyebrow">Who I Am</div>
+      <h2>A backend-first developer who cares about the pixels too.</h2>
+      <p>I'm Emmy Abiodun, a passionate Full Stack Developer specializing in Python, Flask, PostgreSQL, JavaScript, and modern web technologies.</p>
+      <p>I enjoy building secure authentication systems, business platforms, dashboards, and responsive web applications that provide real value to users and businesses.</p>
+      <p>My focus is on writing clean, maintainable code and creating modern user experiences that combine performance, security, and beautiful design.</p>
+      <p>I am continuously improving my skills and building projects that solve real-world problems.</p>
+    </div>
+    <div class="glass about-card reveal">
+      <h4>// focus</h4>
+      <ul class="focus-list">
+        <li>Secure authentication &amp; OTP-driven login flows built with Flask.</li>
+        <li>Server-rendered dashboards powered by Jinja2 and SQLAlchemy.</li>
+        <li>Clean, responsive interfaces from 320px up to 4K displays.</li>
+        <li>Payment integrations, live chat, and real-world business logic.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ================= STATS ================= -->
+<section id="stats">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="eyebrow">By the numbers</div>
+      <h2>Shipped, not just started.</h2>
+    </div>
+    <div class="stats-grid reveal-stagger">
+      <div class="glass stat-card reveal" style="--i:0">
+        <div class="stat-num"><span data-count="15">0</span>+</div>
+        <div class="stat-label">PROJECTS COMPLETED</div>
+      </div>
+      <div class="glass stat-card reveal" style="--i:1">
+        <div class="stat-num"><span data-count="8">0</span>+</div>
+        <div class="stat-label">TECHNOLOGIES USED</div>
+      </div>
+      <div class="glass stat-card reveal" style="--i:2">
+        <div class="stat-num"><span data-count="5">0</span>+</div>
+        <div class="stat-label">BACKEND APPLICATIONS BUILT</div>
+      </div>
+      <div class="glass stat-card reveal" style="--i:3">
+        <div class="stat-num"><span data-count="6">0</span>+</div>
+        <div class="stat-label">FRONTEND APPLICATIONS BUILT</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= SKILLS (full breakdown, shown as cards — always visible, nothing hidden behind another page) ================= -->
+<section id="skills">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="eyebrow">Toolkit</div>
+      <h2>What I build with.</h2>
+      <p>Every tool below is one I use in production — not a badge collection.</p>
+    </div>
+
+    <div class="skills-grid">
+
+      <div class="glass skill-card reveal" style="--i:0">
+        <div class="skill-card-head">
+          <span class="skill-card-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M8 5l-6 7 6 7M16 5l6 7-6 7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </span>
+          <h3>Frontend</h3>
+        </div>
+        <div class="skill-row">
+          <div class="skill-top"><span>HTML5</span><span class="skill-pct">95%</span></div>
+          <div class="bar-track"><div class="bar-fill" data-pct="95"></div></div>
+        </div>
+        <div class="skill-row">
+          <div class="skill-top"><span>CSS3</span><span class="skill-pct">95%</span></div>
+          <div class="bar-track"><div class="bar-fill" data-pct="95"></div></div>
+        </div>
+        <div class="skill-row">
+          <div class="skill-top"><span>JavaScript</span><span class="skill-pct">90%</span></div>
+          <div class="bar-track"><div class="bar-fill" data-pct="90"></div></div>
+        </div>
+        <div class="skill-row">
+          <div class="skill-top"><span>Bootstrap</span><span class="skill-pct">88%</span></div>
+          <div class="bar-track"><div class="bar-fill" data-pct="88"></div></div>
+        </div>
+      </div>
+
+      <div class="glass skill-card reveal" style="--i:1">
+        <div class="skill-card-head">
+          <span class="skill-card-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M4 6h16M4 12h16M4 18h10" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+          </span>
+          <h3>Backend</h3>
+        </div>
+        <div class="skill-row">
+          <div class="skill-top"><span>Python</span><span class="skill-pct">95%</span></div>
+          <div class="bar-track"><div class="bar-fill" data-pct="95"></div></div>
+        </div>
+        <div class="skill-row">
+          <div class="skill-top"><span>Flask</span><span class="skill-pct">93%</span></div>
+          <div class="bar-track"><div class="bar-fill" data-pct="93"></div></div>
+        </div>
+        <div class="skill-row">
+          <div class="skill-top"><span>SQLAlchemy</span><span class="skill-pct">88%</span></div>
+          <div class="bar-track"><div class="bar-fill" data-pct="88"></div></div>
+        </div>
+        <div class="skill-row">
+          <div class="skill-top"><span>PostgreSQL</span><span class="skill-pct">90%</span></div>
+          <div class="bar-track"><div class="bar-fill" data-pct="90"></div></div>
+        </div>
+      </div>
+
+      <div class="glass skill-card reveal" style="--i:2">
+        <div class="skill-card-head">
+          <span class="skill-card-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91a6 6 0 017.94-7.94l-3.76 3.76z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>
+          </span>
+          <h3>Tools</h3>
+        </div>
+        <div class="skill-row">
+          <div class="skill-top"><span>Git</span><span class="skill-pct">92%</span></div>
+          <div class="bar-track"><div class="bar-fill" data-pct="92"></div></div>
+        </div>
+        <div class="skill-row">
+          <div class="skill-top"><span>GitHub</span><span class="skill-pct">92%</span></div>
+          <div class="bar-track"><div class="bar-fill" data-pct="92"></div></div>
+        </div>
+        <div class="skill-row">
+          <div class="skill-top"><span>VS Code</span><span class="skill-pct">90%</span></div>
+          <div class="bar-track"><div class="bar-fill" data-pct="90"></div></div>
+        </div>
+        <div class="skill-row">
+          <div class="skill-top"><span>Postman</span><span class="skill-pct">85%</span></div>
+          <div class="bar-track"><div class="bar-fill" data-pct="85"></div></div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ================= PROJECTS (full grid — filter works in place, no separate page) ================= -->
+<section id="projects">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="eyebrow">Selected Work</div>
+      <h2>Featured projects.</h2>
+      <p>A mix of frontend showcases and full-stack platforms with real backend logic.</p>
+    </div>
+
+    <div class="filters reveal">
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="Frontend">Frontend</button>
+      <button class="filter-btn" data-filter="Full Stack">Full Stack</button>
+    </div>
+
+    <div class="project-grid">
+
+      <article class="glass project-card reveal" data-tilt data-cat="Frontend">
+        <div class="project-shot">
+          <div class="browser-chrome"><span class="d"></span><span class="d"></span><span class="d"></span><span class="url">emmy-estate.vercel.app</span></div>
+          <img class="shot-img" src="emmy-estate.png" alt="Screenshot of Emmy Estate" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+          <div class="shot-fill shot-1" style="display:none;">Emmy Estate</div>
+        </div>
+        <div class="project-body">
+          <div class="project-cat">Frontend</div>
+          <h3>Emmy Estate</h3>
+          <p>Modern real estate website featuring beautiful layouts and responsive design.</p>
+          <div class="tag-row"><span class="tag">HTML5</span><span class="tag">CSS3</span><span class="tag">JavaScript</span></div>
+          <div class="project-links">
+            <a href="https://emmy-estate.vercel.app" target="_blank" rel="noopener" class="mini-btn primary">Live Demo</a>
+            <a href="https://github.com/emmyabiodun0-hash" target="_blank" rel="noopener" class="mini-btn">GitHub</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="glass project-card reveal" data-tilt data-cat="Frontend">
+        <div class="project-shot">
+          <div class="browser-chrome"><span class="d"></span><span class="d"></span><span class="d"></span><span class="url">meet-psi-one.vercel.app</span></div>
+          <img class="shot-img" src="meet-resources.png" alt="Screenshot of Meet Resources" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+          <div class="shot-fill shot-2" style="display:none;">Meet Resources</div>
+        </div>
+        <div class="project-body">
+          <div class="project-cat">Frontend</div>
+          <h3>Meet Resources</h3>
+          <p>Professional corporate website with responsive design and clean UI.</p>
+          <div class="tag-row"><span class="tag">HTML5</span><span class="tag">CSS3</span><span class="tag">JavaScript</span></div>
+          <div class="project-links">
+            <a href="https://meet-psi-one.vercel.app" target="_blank" rel="noopener" class="mini-btn primary">Live Demo</a>
+            <a href="https://github.com/emmyabiodun0-hash" target="_blank" rel="noopener" class="mini-btn">GitHub</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="glass project-card reveal" data-tilt data-cat="Frontend">
+        <div class="project-shot">
+          <div class="browser-chrome"><span class="d"></span><span class="d"></span><span class="d"></span><span class="url">meetresources-omega.vercel.app</span></div>
+          <img class="shot-img" src="meet-resources-omega.png" alt="Screenshot of Meet Resources Omega" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+          <div class="shot-fill shot-3" style="display:none;">Meet Resources Omega</div>
+        </div>
+        <div class="project-body">
+          <div class="project-cat">Frontend</div>
+          <h3>Meet Resources Omega</h3>
+          <p>Modern business website built with performance and user experience in mind.</p>
+          <div class="tag-row"><span class="tag">HTML5</span><span class="tag">CSS3</span><span class="tag">JavaScript</span></div>
+          <div class="project-links">
+            <a href="https://meetresources-omega.vercel.app" target="_blank" rel="noopener" class="mini-btn primary">Live Demo</a>
+            <a href="https://github.com/emmyabiodun0-hash" target="_blank" rel="noopener" class="mini-btn">GitHub</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="glass project-card reveal" data-tilt data-cat="Full Stack">
+        <div class="project-shot">
+          <div class="browser-chrome"><span class="d"></span><span class="d"></span><span class="d"></span><span class="url">techzone-50o9.onrender.com</span></div>
+          <img class="shot-img" src="techzone.png" alt="Screenshot of TechZone Authentication Platform" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+          <div class="shot-fill shot-4" style="display:none;">TechZone Auth Platform</div>
+        </div>
+        <div class="project-body">
+          <div class="project-cat">Full Stack</div>
+          <h3>TechZone Authentication Platform</h3>
+          <p>Registration, login, OTP and email verification with password reset flows.</p>
+          <ul class="feature-list">
+            <li>Registration</li><li>Login</li><li>OTP Verification</li><li>Email Verification</li><li>Password Reset</li><li>Security Features</li>
+          </ul>
+          <div class="tag-row"><span class="tag">Flask</span><span class="tag">PostgreSQL</span><span class="tag">SQLAlchemy</span></div>
+          <div class="project-links">
+            <a href="https://techzone-50o9.onrender.com" target="_blank" rel="noopener" class="mini-btn primary">Live Demo</a>
+            <a href="https://github.com/emmyabiodun0-hash" target="_blank" rel="noopener" class="mini-btn">GitHub</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="glass project-card reveal" data-tilt data-cat="Full Stack">
+        <div class="project-shot">
+          <div class="browser-chrome"><span class="d"></span><span class="d"></span><span class="d"></span><span class="url">ghridciti-energies.onrender.com</span></div>
+          <img class="shot-img" src="ghridciti-energies.png" alt="Screenshot of GhridCiti Energies Platform" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+          <div class="shot-fill shot-5" style="display:none;">GhridCiti Energies</div>
+        </div>
+        <div class="project-body">
+          <div class="project-cat">Full Stack</div>
+          <h3>GhridCiti Energies Platform</h3>
+          <p>Prepaid meter energy platform with a live dashboard, database integration, user authentication and backend logic.</p>
+          <ul class="feature-list">
+            <li>Dashboard</li><li>Database Integration</li><li>User Authentication</li><li>Backend Logic</li><li>Responsive Design</li>
+          </ul>
+          <div class="tag-row"><span class="tag">Flask</span><span class="tag">PostgreSQL</span><span class="tag">Jinja2</span></div>
+          <div class="project-links">
+            <a href="https://ghridciti-energies.onrender.com" target="_blank" rel="noopener" class="mini-btn primary">Live Demo</a>
+            <a href="https://github.com/emmyabiodun0-hash" target="_blank" rel="noopener" class="mini-btn">GitHub</a>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ================= CTA BANNER ================= -->
+<section id="cta">
+  <div class="container">
+    <div class="glass reveal cta-panel">
+      <h2 style="margin-bottom:14px;">Have a project in mind?</h2>
+      <p style="max-width:520px;margin:0 auto 26px;">I'm currently open to freelance and full-time opportunities. Let's build something that works — and looks the part.</p>
+      <div class="cta-actions">
+        <a href="#contact" class="btn btn-primary" data-link>Get in touch</a>
+        <a href="https://wa.me/2348163246702?text=Hello%20Emmy%2C%20I%20found%20your%20portfolio%20and%20I%20would%20like%20to%20discuss%20a%20project%20with%20you." target="_blank" rel="noopener" class="btn btn-whatsapp">WhatsApp me</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= GITHUB ================= -->
+<section id="github">
+  <div class="container">
+    <div class="glass github-panel reveal">
+      <div class="gh-left">
+        <div class="eyebrow">Open Source</div>
+        <h3>@emmyabiodun0-hash</h3>
+        <p>Recent commits, repositories and contribution activity, pulled live from GitHub.</p>
+        <a href="https://github.com/emmyabiodun0-hash" target="_blank" rel="noopener" class="btn btn-outline" style="margin-top:6px;">View GitHub Profile</a>
+        <div class="gh-stats">
+          <div class="gh-stat"><b id="gh-repo-count">—</b><span>REPOSITORIES</span></div>
+          <div class="gh-stat"><b id="gh-followers">—</b><span>FOLLOWERS</span></div>
+          <div class="gh-stat"><b id="gh-public-gists">—</b><span>CONTRIBUTIONS</span></div>
+        </div>
+      </div>
+      <div class="gh-right">
+        <h4 style="font-family:var(--font-mono); font-size:13px; color:var(--cyan); margin-bottom:14px;">// recent repositories</h4>
+        <div class="gh-repos" id="gh-repo-list">
+          <div class="gh-repo">Loading repositories…</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CONTACT ================= -->
+<section id="contact">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="eyebrow">Get In Touch</div>
+      <h2>Let's connect.</h2>
+      <p>I'm always open to discussing new projects, creative ideas, or opportunities.</p>
+    </div>
+
+    <div class="contact-grid">
+      <div class="contact-side reveal">
+        <a href="https://wa.me/2348163246702?text=Hello%20Emmy%2C%20I%20found%20your%20portfolio%20and%20I%20would%20like%20to%20discuss%20a%20project%20with%20you." target="_blank" rel="noopener" class="glass contact-tile">
+          <div><div class="ct-label">WhatsApp</div><div class="ct-value">08163246702</div></div>
+          <button class="copy-btn" data-copy="08163246702" aria-label="Copy WhatsApp number" onclick="event.preventDefault();event.stopPropagation();">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none"><rect x="9" y="9" width="12" height="12" rx="2" stroke="currentColor" stroke-width="1.6"/><path d="M5 15H4a1 1 0 01-1-1V4a1 1 0 011-1h10a1 1 0 011 1v1" stroke="currentColor" stroke-width="1.6"/></svg>
+          </button>
+        </a>
+        <a href="mailto:emmyabiodun0@gmail.com" class="glass contact-tile">
+          <div><div class="ct-label">Email</div><div class="ct-value">emmyabiodun0@gmail.com</div></div>
+          <button class="copy-btn" data-copy="emmyabiodun0@gmail.com" aria-label="Copy email" onclick="event.preventDefault();event.stopPropagation();">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none"><rect x="9" y="9" width="12" height="12" rx="2" stroke="currentColor" stroke-width="1.6"/><path d="M5 15H4a1 1 0 01-1-1V4a1 1 0 011-1h10a1 1 0 011 1v1" stroke="currentColor" stroke-width="1.6"/></svg>
+          </button>
+        </a>
+        <div class="social-row">
+          <a href="https://github.com/emmyabiodun0-hash" target="_blank" rel="noopener" class="glass social-pill">GitHub</a>
+          <a href="https://wa.me/2348163246702" target="_blank" rel="noopener" class="glass social-pill">WhatsApp</a>
+          <a href="mailto:emmyabiodun0@gmail.com" class="glass social-pill">Email</a>
+        </div>
+      </div>
+
+      <form class="glass contact-form reveal" id="contact-form" action="https://formspree.io/f/xjgqpqvw" method="POST">
+        <div class="form-success" id="formSuccess" role="status" hidden>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="1.6"/><path d="M8 12.5l2.5 2.5L16 9" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <span>Message sent — thank you! Emmy will reply soon.</span>
+        </div>
+        <div class="field">
+          <label for="cf-name">Your Name</label>
+          <input type="text" id="cf-name" name="name" required>
+          <span class="field-error" data-error-for="name"></span>
+        </div>
+        <div class="field">
+          <label for="cf-email">Your Email</label>
+          <input type="email" id="cf-email" name="email" required>
+          <span class="field-error" data-error-for="email"></span>
+        </div>
+        <div class="field">
+          <label for="cf-subject">Subject</label>
+          <input type="text" id="cf-subject" name="subject" required>
+          <span class="field-error" data-error-for="subject"></span>
+        </div>
+        <div class="field">
+          <label for="cf-message">Your Message</label>
+          <textarea id="cf-message" name="message" required></textarea>
+          <span class="field-error" data-error-for="message"></span>
+        </div>
+        <input type="hidden" name="_subject" value="New message from portfolio site">
+        <button type="submit" class="btn btn-primary" id="cf-submit">
+          <span id="cf-submit-label">Send Message</span>
+        </button>
+        <p class="form-note" id="formGeneralError" hidden></p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer>
+  <div class="container footer-grid">
+    <div class="footer-note">Designed and developed by Emmy Abiodun.</div>
+    <div class="footer-links">
+      <a href="#home" data-link>Home</a>
+      <a href="#about" data-link>About</a>
+      <a href="#skills" data-link>Skills</a>
+      <a href="#projects" data-link>Projects</a>
+      <a href="#contact" data-link>Contact</a>
+    </div>
+  </div>
+</footer>
+
+<a class="whatsapp-fab" href="https://wa.me/2348163246702?text=Hello%20Emmy%2C%20I%20found%20your%20portfolio%20and%20I%20would%20like%20to%20discuss%20a%20project%20with%20you." target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+  <svg width="28" height="28" viewBox="0 0 24 24" fill="none"><path d="M17.6 6.32A7.85 7.85 0 0 0 12.05 4a7.94 7.94 0 0 0-6.9 11.9L4 20l4.2-1.1a7.9 7.9 0 0 0 3.85 1h.01a7.94 7.94 0 0 0 5.54-13.58ZM12.06 18.4a6.55 6.55 0 0 1-3.35-.92l-.24-.14-2.5.65.67-2.43-.16-.25a6.6 6.6 0 1 1 5.58 3.09Zm3.6-4.94c-.2-.1-1.17-.58-1.35-.64-.18-.07-.31-.1-.44.1-.13.19-.5.64-.62.77-.11.13-.23.15-.42.05-.2-.1-.83-.3-1.58-.97a5.9 5.9 0 0 1-1.1-1.36c-.11-.2-.01-.3.09-.4.09-.1.2-.23.3-.35.1-.12.13-.2.2-.33.07-.13.03-.25-.02-.35-.05-.1-.44-1.06-.6-1.45-.16-.38-.32-.33-.44-.34h-.38c-.13 0-.34.05-.52.24-.18.2-.68.66-.68 1.6s.7 1.86.79 1.99c.1.13 1.37 2.1 3.33 2.94.46.2.83.32 1.11.41.47.15.9.13 1.24.08.38-.06 1.17-.48 1.33-.94.16-.46.16-.85.11-.94-.05-.09-.18-.14-.38-.24Z" fill="#0b1f14"/></svg>
+</a>
+
+<script src="script.js"></script>
+</body>
+</html>
